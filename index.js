@@ -1,8 +1,7 @@
 //echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 const express = require('express');
 const app = express();
-
-const PORT = process.env.PORT || 5000;
+const { PORT } = require('./config/keys')
 
 app.listen(PORT, err => {
   if (err) {
