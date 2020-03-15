@@ -3,6 +3,8 @@ const express = require('express');
 const app = express();
 const { PORT } = require('./config/keys')
 
+require('./startUp/parser')(app);
+
 app.listen(PORT, err => {
   if (err) {
     console.error(`Error to connect server: ${err}`);
