@@ -9,5 +9,15 @@ module.exports = {
     }
     
     res.status(200).json({ allCountries: data });
+    },
+  getCountry: async (req, res) => {
+    const country = req.params.country;
+    const { data } = await axios.get(`${API_URL}/countries/${country}`).catch(err =>{ return res.status(404).json({ message:"Error, try again!", err }) });
+    if(!data) {
+      return;
     }
+    
+    res.status(200).json({ country: data });
+    }  
+
 }
