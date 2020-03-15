@@ -1,0 +1,35 @@
+{
+  "name": "covid-19",
+  "version": "1.0.0",
+  "description": "Conavirus stats",
+  "main": "index.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "server": "nodemon index.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elPoeta/covid-19.git"
+  },
+  "keywords": [
+    "covid-19"
+  ],
+  "author": "Leonardo Tosetto (leonardo.a.tosetto@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/elPoeta/covid-19/issues"
+  },
+  "homepage": "https://github.com/elPoeta/covid-19#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "concurrently": "^5.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
