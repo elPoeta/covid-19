@@ -3,7 +3,7 @@ const { API_URL } = require('../config/keys');
 
 module.exports = {
   getStats: async (req, res) => {
-  const { data } = await axios.get(API_URL).catch(err =>{ return res.status(404).json({ message:"Error, try again!", err }) });
+  const { data } = await axios.get(API_URL).catch(error =>{ return res.status(404).json({ message:"Error, try again!", error }) });
   if(!data) {
     return;
   }
