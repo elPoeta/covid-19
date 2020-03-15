@@ -28,7 +28,7 @@ module.exports = {
       return;
     }
     
-    res.status(200).json({ country: data });
+    res.status(200).json({ countryDetail: data });
     }
 
 }
