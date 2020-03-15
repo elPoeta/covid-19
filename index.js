@@ -4,6 +4,7 @@ const app = express();
 const { PORT } = require('./config/keys')
 
 require('./startUp/parser')(app);
+require('./startUp/routes')(app);
 
 app.listen(PORT, err => {
   if (err) {
