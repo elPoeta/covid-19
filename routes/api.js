@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const { getStats, getCountries } = require('../controllers/generalStats');
+const { getStats } = require('../controllers/generalStats');
+const { getCountries } = require('../controllers/countryController');
 
 router.get('/stats', getStats);
 router.get('/countries', getCountries);
