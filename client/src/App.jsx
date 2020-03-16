@@ -1,15 +1,17 @@
 import React from 'react';
 
 import './App.css';
+import { ApiGlobalProvider } from './context/ApiGlobalState';
+import { Home } from './components/Home';
 
 const App = () => {
   return (
+   <ApiGlobalProvider>
     <div className="App">
-      <header className="App-header">
-        Home
-      </header>
+      <Home/>
     </div>
-  );
+   </ApiGlobalProvider>
+  ); 
 }
 
 export default App;
