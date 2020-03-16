@@ -16,5 +16,14 @@ module.exports = {
     lastUpdate
   }
   res.status(200).json({ stats });
-  }
+  },
+  getStatsDetail: async (req, res) => {
+    const typeDetail = req.params.typeDetail.toLowerCase();
+    const { data } = await axios.get(`${API_URL}/${typeDetail}`).catch(error =>{ return res.status(404).json({ message:"Error, try again!", error }) });
+    if(!data) {
+      return;
+    }
+    
+    res.status(200).json({ statsDetail: data });
+    }
 }
